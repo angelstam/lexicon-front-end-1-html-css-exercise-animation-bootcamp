@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four corners</title>
+    <style type="text/css">
+
+        body {
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @keyframes move {
+            0% {left: 0px; top: 0px; background-color: green;}
+            20% {left: 450px; top: 0px; background-color: red;}
+
+            25% {left: 450px; top: 0px; background-color: red;}
+            45% {left: 450px; top: 450px; background-color: blue;}
+
+            50% {left: 450px; top: 450px; background-color: blue;}
+            70% {left: 0px; top: 450px; background-color: hotpink;}
+
+            75% {left: 0px; top: 450px; background-color: hotpink;}
+        }
+
+        main {
+            background-color: white;
+            box-shadow: 0 0 1rem lightgray;
+            width: 500px;
+            height: 500px;
+            position: relative;
+
+            & aside {
+                background-color: green;
+                width: 50px;
+                height: 50px;
+                left: 0px;
+                top: 0px;
+                position: absolute;
+                animation: 5s infinite move;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <aside></aside>
+    </main>
+</body>
+</html>
