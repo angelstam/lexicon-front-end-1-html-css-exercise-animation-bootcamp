@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide in menu</title>
+    <style type="text/css">
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            background-color: rgb(230, 230, 230);
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        nav {
+            position: absolute;
+            top: 0px;
+            left: -30rem;
+            height: 100vh;
+            width: 20rem;
+            background-color: black;
+            color: white;
+            padding: 5rem 1rem;
+            transition: all 500ms;
+            text-align: left;
+
+            &.open {
+                display: block;
+                left: 0px;
+
+                & a {
+                    opacity: 1;
+                    transition-delay: 200ms;
+                }
+
+                & a:nth-of-type(2) {
+                    transition-delay: 400ms;
+                }
+
+                & a:nth-of-type(3) {
+                    transition-delay: 600ms;
+                }
+
+                & a:nth-of-type(4) {
+                    transition-delay: 800ms;
+                }
+            }
+
+            & a {
+                display: grid;
+                grid-template-columns: 3rem auto;
+                text-decoration: none;
+                color: white;
+                align-content: start;
+                opacity: 0;
+                transition: opacity 1s;
+                transition-delay: 0s;
+            }
+
+            & a:hover {
+                text-shadow: 0rem 0rem 1rem white;
+            }
+
+            & h3 {
+                margin-top: 0;
+                margin-bottom: 0.8rem;
+            }
+
+            & article {
+                margin-bottom: 1rem;
+            }
+
+            & .desc {
+                color: lightgray;
+                font-size: 0.8rem;
+            }
+        }
+
+        a.toggle {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">
+            <aside>01</aside>
+            <article>
+                <h3>Home</h3>
+                <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            </article>
+        </a>
+        <a href="#">
+            <aside>02</aside>
+            <article>
+                <h3>What we do</h3>
+                <p class="desc">Sunt saepe vel mollitia, ab maxime fugit temporibus, fuga reprehenderit id quisquam nostrum eveniet, esse.</p>
+            </article>
+        </a>
+        <a href="#">
+            <aside>03</aside>
+            <article>
+                <h3>Who we are</h3>
+                <p class="desc">Nobis magnam beatae quibusdam sapiente quisquam libero tenetur alias corrupti aliquid? Optio tenetur obcaecati doloribus beatae.</p>
+            </article>
+        </a>
+        <a href="#">
+            <aside>04</aside>
+            <article>
+                <h3>Contact</h3>
+                <p class="desc">Nulla numquam, animi dolorum atque expedita odio aliquam quidem officiis? Molestias voluptatum quasi debitis.</p>
+            </article>
+        </a>
+    </nav>
+    <article>
+        <a href="#" class="toggle"></a>
+        <h1>Hello there</h1>
+        <h2>Toggle the red button in the upper left corner</h2>
+    </article>
+    <script>
+        document.querySelector('.toggle')
+        .addEventListener('click', (e) => {
+                document.querySelector('nav').classList.toggle('open')
+        })
+    </script>
+</body>
+</html>
