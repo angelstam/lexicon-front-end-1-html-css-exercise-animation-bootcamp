@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card spread</title>
+    <style type="text/css">
+        :root {
+            --card-1-color: rgb(234,52,38);
+            --card-2-color: rgb(240,151,61);
+            --card-3-color: rgb(250,248,94);
+            --card-4-color: rgb(137,249,97);
+            --card-5-color: rgb(105,203,142);
+            --card-6-color: rgb(133,232,250);
+            --card-7-color: rgb(107,119,244);
+            --card-8-color: rgb(188,126,238);
+            --card-9-color: rgb(233,182,209);
+        }
+
+        body {
+            background-color: #eee;
+        }
+
+        section.card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+
+            &:hover {
+                & article {
+                    transform: translateX(2rem) rotateZ(40deg);
+                    transform-origin: bottom;
+                }
+
+                & article:nth-of-type(2) {
+                    transform: translateX(1.5rem) rotateZ(30deg);
+                }
+
+                & article:nth-of-type(3) {
+                    transform: translateX(1rem) rotateZ(20deg);
+                }
+
+                & article:nth-of-type(4) {
+                    transform: translateX(0.5rem) rotateZ(10deg);
+                }
+
+                & article:nth-of-type(5) {
+                    transform: none;
+                }
+
+                & article:nth-of-type(6) {
+                    transform: translateX(-0.5rem) rotateZ(-10deg);
+                }
+
+                & article:nth-of-type(7) {
+                    transform: translateX(-1rem) rotateZ(-20deg);
+                }
+
+                & article:nth-of-type(8) {
+                    transform: translateX(-1.5rem) rotateZ(-30deg);
+                }
+
+                & article:nth-of-type(9) {
+                    transform: translateX(-2rem) rotateZ(-40deg);
+                }
+            }
+
+            & article {
+                width: 12rem;
+                height: 17rem;
+                background-color: var(--card-1-color);
+                border-radius: 4px;
+                position: absolute;
+                transition: all 200ms ease;
+            }
+
+            & article:nth-of-type(2) {
+                background-color: var(--card-2-color);
+            }
+
+            & article:nth-of-type(3) {
+                background-color: var(--card-3-color);
+            }
+
+            & article:nth-of-type(4) {
+                background-color: var(--card-4-color);
+            }
+
+            & article:nth-of-type(5) {
+                background-color: var(--card-5-color);
+            }
+
+            & article:nth-of-type(6) {
+                background-color: var(--card-6-color);
+            }
+
+            & article:nth-of-type(7) {
+                background-color: var(--card-7-color);
+            }
+
+            & article:nth-of-type(8) {
+                background-color: var(--card-8-color);
+            }
+
+            & article:nth-of-type(9) {
+                background-color: var(--card-9-color);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <section class="card">
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+    </section>
+</body>
+</html>
