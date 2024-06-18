@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner</title>
+    <style type="text/css">
+
+        body {
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        @keyframes move {
+            0% {transform: rotateZ(0deg); background-color: green;}
+            25% {transform: rotateZ(180deg); background-color: red;}
+            50% {transform: rotateZ(360deg); background-color: blue;}
+            75% {transform: rotateZ(180deg); background-color: hotpink;}
+        }
+
+        .spinner {
+            background-color: green;
+            border-radius: 10px;
+            width: 10px;
+            height: 50px;
+            animation: 5s infinite move;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="spinner"></div>
+</body>
+</html>
